@@ -1,4 +1,4 @@
 name: Refocus Studios Blog
 markdown: redcarpet
 pygments: true
-baseurl: http://blog.refocus-studios.com
+baseurl: http://refocus-studios.github.io/
