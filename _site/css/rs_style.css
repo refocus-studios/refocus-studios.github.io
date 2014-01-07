@@ -1,7 +1,12 @@
-.main_logo {
+.main-logo {
         width: 300px;
         height: 200px;
+<<<<<<< HEAD
+            
+        background-color: #000000;
+=======
         background: asset-url("RS-Main-Logo.png", image)  no-repeat;
+>>>>>>> master
         
 }
 
