@@ -4,120 +4,103 @@
 <head>
     <title>Refocus Studios</title>
 
-    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/rs_style.css" rel="stylesheet">
 </head>
 
 <body>
-
-
-    <!-- this section needs to hide when not on top screen, button needs to stay small on small devices -->
-
     <div class="navbar navbar-default navbar-fixed-top hidden-xs">
         <div class="container">
-
             <ul class=" main-links nav navbar-nav navbar-right">
-                
-                <li><a href="#">What We Do</a></li>
-                <li><a href="#">Who We Are</a></li>
-                
-                <!-- <li><a href="#">Biography</a>
+                <li><a href="#what_we_do">What We Do</a>
                 </li>
-                <li><a href="#">Blog</a>
+                <li><a href="#who_we_are">Who We Are</a>
+                </li>
+                <!--                 <li>
+                    <button type="button" class="btn btn-success navbar-btn">Contact Us</button>
                 </li> -->
-                <li>
-                    <button type="button" class="btn btn-success navbar-btn" style="margin-left: 10px;">Contact Us</button>
-                </li>
             </ul>
         </div>
     </div>
 
-
-    <!-- Jumbotron -->
+    <!-- RS Logo -->
     <div class="jumbotron">
         <div class="container">
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="main-logo col-md-6" style="font-align: center;">
-                <img src="/images/rs_logo.gif" style="max-width: 100%;" alt="Refocus Studios Logo">
+                <div class="main-logo col-md-6">
+                    <img src="/images/rs_logo.jpg" alt="Refocus Studios Logo">
                 </div>
-                <div class="col-md-3"></div>
-            </div>
-
-            <div class="row">
-            <div class="notecard col-md-3 center-block"></div>
-                <div class="notecard col-md-6 center-block">          
-                
-                    <!-- 
-                <quote class="text-center">"this is an ispirational quote that cycles through"</quote>
-                <h5 class="text-right">- by some author</h5> -->
+                <div class="main-quote">
+                    <quote>See Things Differently</quote>
                 </div>
-            
             </div>
         </div>
     </div>
-    <!-- End Jumbotron -->
 
-<!-- What We Do -->
+    <!-- Code for Notecard moved to End of Document Follow on Task -->
+    <!-- End RS Logo -->
 
- <!-- About Us -->
-
-    <div class="container">
-        <div class="row center-block">
+    <!-- What We Do -->
+    <div class="container" id="what_we_do" >
+        <div class="row center-block" >
             <h1>What We Do</h1>
         </div>
     </div>
 
-
     <div class="container">
         <div class="row ft">
-            <div class="col-sm-6 hidden-xs">
-                <div class="thumbnail ari img-rounded"></div>
 
-            </div>
-            <div class="col-sm-6 ft-copy">
-                <h2>Ari Perez</h2>
+            <div class="col-sm-12 ft-copy">
+                <h2>We Specialize in...</h2>
                 <p>
-                    Ari has always been passionate about using Web Development to simplify and tackle life's challenges.  Whether as a communications officer in the US Army at an isolated outpost or in a cubicle in Washington DC, he has always pushed the limits on how software can help people increase their efficency.   
+                    Tackling tough challenges that require both a deep understanding of how to both collect and analyze data.
                 </p>
             </div>
         </div>
 
         <div class="row ft">
-            <div class="col-sm-6 ft-copy">
-                <h2>Paul Bishop</h2>
+            <div class="col-sm-12 ft-copy">
+                <h2>We have experience in...</h2>
                 <p>
-                    Learn what Parse.com offers as a "backend-as-a-service" platform. Explore the user account management APIs provided by Parse.com and write the code to create and save a new user in a Parse.com data store.
+                    <ul>
+                        <li>Enterprise Data Warehouse</li>
+                        <li>Workforce Analytics</li>
+                        <li>Program Management</li>
+                    </ul>
                 </p>
-            </div>
-            <div class="col-sm-6 hidden-xs">
-                <div class="thumbnail paul img-rounded"></div>
             </div>
         </div>
 
         <div class="row ft">
-            <div class="col-sm-6 hidden-xs">
-                <div class="thumbnail ryan img-rounded"></div>
-            </div>
-            <div class="col-sm-6 ft-copy">
-                <h2>Ryan Dorr</h2>
+            <div class="col-sm-12 ft-copy">
+                <h2>Our Technical Skills include..</h2>
                 <p>
-                    We'll teach you how to upload images, video files, and messages to Parse.com's cloud servers. Then learn how to retrieve the data by setting up custom queries that download and display them in the app.
+                    <ul>
+                        <li>Ruby on Rails</li>
+                        <li>Jekyll</li>
+                        <li>Oracle Databases</li>
+                        <li>Postgres Databases</li>
+
+                    </ul>
                 </p>
             </div>
         </div>
     </div>
 
 
-<!-- End What Wed Do -->
+  
+    <!-- End What We Do -->
+
+
+
 
 
     <!-- About Us -->
 
-    <div class="container">
+    <div class="container" id="who_we_are">
         <div class="row center-block">
-            <h1>About the Refocus Studios Team</h1>
+            <h1>Who We Are</h1>
         </div>
     </div>
 
@@ -125,21 +108,20 @@
     <div class="container">
         <div class="row ft">
             <div class="col-sm-6 hidden-xs">
-                <div class="thumbnail ari img-rounded"></div>
+                <div class="thumbnail ari img-rounded">
+                    <img src="/images/bio_pic_ari.jpg" alt="Picture Ari Perez">
+
+                </div>
 
             </div>
             <div class="col-sm-6 ft-copy">
                 <h2>Ari Perez</h2>
                 <p>
-<<<<<<< HEAD
-                    Ari has always been passionate about using Web Development to simplify and tackle life's challenges.  Whether as a communications officer in the US Army at an isolated outpost or in a cubicle in Washington DC, he has always pushed the limits on how software can help people increase their efficency.   
-=======
-                    Army - West Point Academy</br>
+                    Ari has always been passionate about using Web Development to simplify and tackle life 's challenges. Whether as a communications officer in the US Army at an isolated outpost or in a cubicle in Washington DC, he has always pushed the limits on how software can help people increase their efficency. Army - West Point Academy</br>
                     Army - Active Duty</br>
                     Deloitte - Workforce Analytics</br>
                     Accenture - EDW</br>
                     Synexxus - Developer
->>>>>>> master
                 </p>
             </div>
         </div>
@@ -153,13 +135,18 @@
                 </p>
             </div>
             <div class="col-sm-6 hidden-xs">
-                <div class="thumbnail paul img-rounded"></div>
+                <div class="thumbnail paul img-rounded">
+                    <img src="/images/bio_pic_paul.jpg" alt="Picture Paul Bishop">
+
+                </div>
             </div>
         </div>
 
         <div class="row ft">
             <div class="col-sm-6 hidden-xs">
-                <div class="thumbnail ryan img-rounded"></div>
+                <div class="thumbnail ryan img-rounded">
+                    <img src="/images/bio_pic_ryan.jpg" alt="Picture Ryan Dorr">
+                </div>
             </div>
             <div class="col-sm-6 ft-copy">
                 <h2>Ryan Dorr</h2>
@@ -171,7 +158,7 @@
             </div>
         </div>
     </div>
-<!-- End About Us -->
+    <!-- End About Us -->
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -180,7 +167,7 @@
                 <ul class=" main-links nav navbar-nav navbar-right">
                     <li class="heading"><a href="#">Get in touch:</a>
                     </li>
-                    <li><a href="mailto:admin@refocus-studios.com">admin@refocus-studios.com</a>
+                    <li><a href="mailto:admin@refocus-studios.com">info@refocus-studios.com</a>
                     </li>
                 </ul>
             </div>
@@ -190,3 +177,16 @@
 </body>
 
 </html>
+
+
+<!--<div class="row">
+<div class="notecard col-md-3 center-block"></div>
+<div class="notecard col-md-6 center-block">
+
+
+<quote class="text-center">"this is an ispirational quote that cycles through"</quote>
+<h5 class="text-right">- by some author</h5>
+</div>
+
+</div> -->
+<!-- </div> -->
