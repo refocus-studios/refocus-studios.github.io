@@ -133,6 +133,7 @@ hr {
 .ft-copy p,
 .copy-offset { 
         width: 88%;
+        color: black;
 }
 .panel {
         background-image: url('../img/form-panel-bg.png');
