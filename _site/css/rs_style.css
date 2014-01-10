@@ -1,6 +1,8 @@
-.main-logo {
-        width: 300px;
-        height: 200px;                
+.main-logo img {
+        /*width: 300px;
+        height: 200px;
+        border: 2px solid black;*/
+        max-width: 90%;
 }
 
 
@@ -9,9 +11,10 @@
         padding-right: 200px;
 }
 
+
 body{
         background-color: rgb(232,232,232);
-}
+ }
 
 .about_us {
         background-color: #F0F0F0;
@@ -24,21 +27,20 @@ body{
         background: asset-url("/images/notecard.jpeg", image)  no-repeat;
 }
 
-.ari {
-        width: 200px;
-        height: 200px;
+.ari, .paul, .ryan {
+        max-width: 100%;
+        /*height: 200px;*/
+}
+
+.ari { 
         background: asset-url("images/ari.jpg", image)  no-repeat;
 }
 
 .paul {
-        width: 200px;
-        height: 200px;
         background: asset-url("bio_pic_paul.jpg", image)  no-repeat;
 }
 
 .ryan {
-        width: 200px;
-        height: 200px;
         background: asset-url("ryan.gif", image)  no-repeat;
 }
 
@@ -58,7 +60,7 @@ body{
 }
 h1 {
         font-weight: 200;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 }
 h2, h3 {
         font-size: 1.25em;
@@ -67,11 +69,13 @@ h2, h3 {
         margin-top: 0;
 }
 p {
-        color: #b3aeb5;
+        /*color: #b3aeb5;*/
+        color: black;
         line-height: 1.7;
         font-size: 1.1em;
         font-weight: 200;
 }
+
 strong {
         color: #5f5d60;
 }
@@ -124,16 +128,25 @@ strong {
 hr {
         margin-bottom: 58px;
 }
+
+.do > p , .work > p {
+    font-size: 1.2em;
+}
+
+#do h1, #work h1, #are h1 {
+    border-bottom: 2px solid gray;
+}
+
+
 .ft {
         margin-bottom: 72px;
 }
 .ft-copy {
         padding-top: 32px;
 }
-.ft-copy p,
-.copy-offset { 
-        width: 88%;
-        color: black;
+.ft-copy .copy-offset { 
+        /*width: 88%;*/
+        /*color: black;*/
 }
 .panel {
         background-image: url('../img/form-panel-bg.png');
@@ -213,7 +226,7 @@ hr {
         padding: 200px 0 140px 0;
         margin-bottom: 70px;
         background-color: #FFFFFF;
-        height: 800px;
+        height: 650px;
 }
 .device {
         width: 345px;
@@ -227,9 +240,11 @@ hr {
 
 .main-logo {
 
-        width: 100%;
+        max-width: 52%;
         height: 100%;
         margin-top: 22px;
+        margin-right: auto;
+        margin-left: auto;
         text-align: center;
         /*margin-left: 300px;*/
         /*text-indent: 100%;*/
@@ -238,6 +253,7 @@ hr {
         /*background: url('../img/main-logo.png') no-repeat;*/
         background-size: 100%;        
         float: none;
+        box-shadow: 8px 10px 12px gray;
 }
 
 .main-quote {
@@ -326,17 +342,23 @@ hr {
                 margin-top: 28px;
         }
 }
+@media (max-width: 990px) {
+        .jumbotron {
+                height: 450px;
+        }
+}
 @media (max-width: 767px) {
         .navbar {
                 min-height: 60px;
         }
         .main-logo {
-                width: 82px;
+                max-width: 100%;
                 margin-top: 20px;
         }
         .jumbotron {
                 padding-top: 80px;
                 margin-bottom: 32px;
+                height: 300px;
         }
         .lead {
                 margin-bottom: 40px;
@@ -346,6 +368,10 @@ hr {
         }
         hr {
                 margin-bottom: 40px;
+        }
+
+        .do > p , .work > p {
+                font-size: 1.1em;
         }
         .btn-success {
                 width: 85%;
@@ -362,4 +388,22 @@ hr {
                 float: left;
                 margin-right: 32px;
         }
+        .ari, .paul, .ryan {
+                width: 150px;
+                height: 150px;
+        }
+        .paul_border {
+            border-top: 2px solid gray;
+        }
+        .ryan_border {
+            border-top: 2px solid gray;
+        }
 }
+
+/*The below div border segment in used as a visual editing aid.*/
+
+/*div {
+    border: 2px solid black;
+}*/
+
+/*==========================*/
