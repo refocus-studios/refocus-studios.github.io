@@ -138,6 +138,7 @@ hr {
 }
 
 
+
 .ft {
         margin-bottom: 72px;
 }
@@ -341,10 +342,15 @@ hr {
         .device {
                 margin-top: 28px;
         }
+        
 }
 @media (max-width: 990px) {
         .jumbotron {
                 height: 450px;
+        }
+
+        #do, #work, #are {
+                padding-top: 80px;
         }
 }
 @media (max-width: 767px) {
@@ -387,6 +393,9 @@ hr {
         .link-list {
                 float: left;
                 margin-right: 32px;
+        }
+        #do, #work, #are {
+                padding-top: 30px;
         }
         .ari, .paul, .ryan {
                 width: 150px;
