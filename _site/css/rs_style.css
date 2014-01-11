@@ -30,6 +30,7 @@ body{
 .ari, .paul, .ryan {
         max-width: 100%;
         /*height: 200px;*/
+
 }
 
 .ari { 
@@ -79,6 +80,11 @@ p {
 strong {
         color: #5f5d60;
 }
+
+#do h1, #work h1, #are h1 {
+    text-shadow: 3px 3px 3px gray;
+}
+
 .navbar-text {
         font-weight: bold;
         margin-right: 0;
@@ -137,8 +143,6 @@ hr {
     border-bottom: 2px solid gray;
 }
 
-
-
 .ft {
         margin-bottom: 72px;
 }
@@ -176,6 +180,7 @@ hr {
 .main-footer {
         margin: 100px 0 80px 0;
 }
+
 
 /* Form
 ================================= */
