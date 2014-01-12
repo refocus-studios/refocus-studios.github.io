@@ -13,8 +13,10 @@
 
 
 body{
-        /*background-color: rgb(232,232,232);*/
-        background-color: rgb(222,222,222);
+        background-color: rgb(232,232,232);
+        
+        /*inset background color*/
+        /*background-color: rgb(222,222,222);*/
         
         /*====Recommanded darker backgound color====*/
         /*background-color: #444;*/
@@ -102,14 +104,15 @@ strong {
   margin-left: 10px;
 }
 
-#do, #work, #are {
+/*Inset code; to remove later*/
+/*#do, #work, #are {
     background-color: rgb(232,232,232);
     border-width: 1.5px;
     border-radius: 8px;
     border-style: inset;
     box-shadow: 3px 3px 4px gray inset;
     margin-bottom: 150px;
-}
+}*/
 
 .lead {
         color: #d5c1f2;
