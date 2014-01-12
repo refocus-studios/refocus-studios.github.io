@@ -1,6 +1,6 @@
 # ToDo
 
-[] Modify Text to mirror 'Start with Why'
+* [ ] Modify Text to mirror 'Start with Why'
  * Why
  * How
  * What
