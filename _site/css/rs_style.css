@@ -13,7 +13,11 @@
 
 
 body{
-        background-color: rgb(232,232,232);
+        /*background-color: rgb(232,232,232);*/
+        background-color: rgb(222,222,222);
+        
+        /*====Recommanded darker backgound color====*/
+        /*background-color: #444;*/
  }
 
 .about_us {
@@ -77,6 +81,10 @@ p {
         font-weight: 200;
 }
 
+.main-footer p {
+    text-align: center;
+}
+
 strong {
         color: #5f5d60;
 }
@@ -94,6 +102,14 @@ strong {
   margin-left: 10px;
 }
 
+#do, #work, #are {
+    background-color: rgb(232,232,232);
+    border-width: 1.5px;
+    border-radius: 8px;
+    border-style: inset;
+    box-shadow: 3px 3px 4px gray inset;
+    margin-bottom: 150px;
+}
 
 .lead {
         color: #d5c1f2;
@@ -133,6 +149,7 @@ strong {
 
 hr {
         margin-bottom: 58px;
+        background-color: rgb(222,222,222);
 }
 
 .do > p , .work > p {
