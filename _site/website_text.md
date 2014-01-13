@@ -1,3 +1,10 @@
+# ToDo
+
+* [ ] Modify Text to mirror 'Start with Why'
+ * Why
+ * How
+ * What
+
 # Refocus Studios
 
 > See Things Differently
