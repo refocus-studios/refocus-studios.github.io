@@ -11,6 +11,10 @@
         padding-right: 200px;
 }
 
+.navbar {
+    background-color: rgb(255,255,255);
+}
+
 
 body{
         background-color: rgb(232,232,232);
@@ -25,6 +29,8 @@ body{
 .about_us {
         background-color: #F0F0F0;
 }
+
+
 
 
 .notecard {
@@ -91,8 +97,20 @@ strong {
         color: #5f5d60;
 }
 
+#why {
+        color: rgb(10,80,0);
+}
+
+#how {
+        color: rgb(0,25,70);
+}
+
+#what {
+        color: rgb(80,0,0);
+}
+
 #do h1, #work h1, #are h1 {
-    text-shadow: 3px 3px 3px gray;
+    text-shadow: 2px 2px 2px gray;
 }
 
 .navbar-text {
