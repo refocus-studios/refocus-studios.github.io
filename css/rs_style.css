@@ -279,7 +279,7 @@ hr {
         /*background: url('../img/main-logo.png') no-repeat;*/
         background-size: 100%;        
         float: none;
-        box-shadow: 8px 10px 12px gray;
+        /*box-shadow: 8px 10px 12px gray;*/
 }
 
 .main-quote {
