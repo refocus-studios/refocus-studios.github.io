@@ -114,7 +114,7 @@ strong {
 
 }
 
-#do, #work {
+#do, #work{
     background-color: rgb(255,255,255);
 }
 
@@ -157,6 +157,28 @@ strong {
 .copyright {
         opacity: .8;
         font-size: .9em;
+}
+
+
+
+
+#tools {
+  height: 50px;
+  text-align: justify;
+  font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
+  min-width: 600px;
+}
+
+#tools div {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+#tools:after {
+  content: '';
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
 }
 
 /* Links
