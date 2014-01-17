@@ -33,15 +33,11 @@ strong {
 
 body{
     background-color: rgb(230,233,238);  
-           margin:0;
-        padding:0;      
-
+    margin:0;
+    padding:0;      
  }
 
- hr {
-        margin-bottom: 58px;
-        background-color: rgb(222,222,222);
-}
+
 
 /*Navbar*/
 .navbar {
@@ -49,7 +45,7 @@ body{
 }
 
 .thin-navbar {
-position: fixed;
+position: absolute;
 top: 0;
 left: 0;
 text-align: right;
@@ -98,6 +94,25 @@ overflow: hidden;
 .content_container {
     height: 100vh;
     width: 100vw;   
+
+
+}
+
+.footer_container {
+    height: 50vh;
+    width: 100vw;
+    
+    padding-top: 20vh;
+    text-align: center;
+
+    background-color: #009B95;   
+
+    font-family: "brandon-grotesque", ​Helvetica, ​Arial, sans-serif;
+    font-size: 1.75em;
+}
+
+#footer-btn {
+    background-color: #FF7100;
 }
 
 /*Jumbrotron*/
@@ -177,9 +192,8 @@ overflow: hidden;
 
 
 /*Footer*/
-#footer p {
-    text-align: center;
-}
+
+
 
 /* Media Queries
 ================================= */
@@ -190,7 +204,7 @@ overflow: hidden;
                 padding-bottom: 20px;
                 background-position: 10% 10%;
 
-        }
+        } 
         .ft-copy {
                 padding-top: 12px;
         }
