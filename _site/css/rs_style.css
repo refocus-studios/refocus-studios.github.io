@@ -90,6 +90,10 @@ border-radius: 0;*/
     overflow: hidden;
 }
 
+.container {
+    padding-top: 30px;
+}
+
 /*Content Containers*/
 .content_container {
     height: 100vh;
@@ -125,11 +129,10 @@ border-radius: 0;*/
     text-align: center;
 }
 
+
 /*About Us*/
-#about_us {
-    background-color: #5ccdc9;
-    padding-top: 50px;
-    padding-bottom: -50px;
+#about-us {
+    background-color: #009B95;
 }
 
 
@@ -169,8 +172,14 @@ border-radius: 0;*/
         
 }
 
-/*Bios*/
+/* Bios (Who We Are) */
+#bios {
+    background-color: #FFFFFF; 
+}
 
+.bio-image {
+    width: 175px;
+}
 
 /*Footer*/
 .footer_container {
