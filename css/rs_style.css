@@ -10,22 +10,19 @@
         font-style: normal;
 }
 h1 {
-        font-size: 1.8em;
-        font-family: "Avenir Next", sans-serif;
+        font-weight: 200;
         margin-bottom: 20px;
-        text-transform: uppercase;
-        font-weight: bold;
 }
 h2, h3 {
-        font-size: 1.5em;
+        font-size: 1.25em;
         color: #5f5d60;
         margin-bottom: 16px;
         margin-top: 0;
 }
 p {        
-        color: 0F0F0F;
+        color: black;
         line-height: 1.7;
-        font-size: 1.3em;
+        font-size: 1.1em;
         font-weight: 200;
 }
 
@@ -93,6 +90,10 @@ border-radius: 0;*/
     overflow: hidden;
 }
 
+.container {
+    padding-top: 30px;
+}
+
 /*Content Containers*/
 .content_container {
     height: 100vh;
@@ -128,24 +129,17 @@ border-radius: 0;*/
     text-align: center;
 }
 
-/*About Us*/
-#about_us {
-    background-color: #5ccdc9;
-    padding-top: 50px;
-    padding-bottom: -50px;
-}
 
-#about_us h1 {
-    color:  #06276F;
+/*About Us*/
+#about-us {
+    background-color: #009B95;
 }
 
 
 /*Why We Exist*/
 #why_exist {
-    
+ 
 }
-
-
 
 
 /*How We Work*/
@@ -157,7 +151,7 @@ border-radius: 0;*/
   height: 50px;
   text-align: justify;
   font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
-  /*min-width: 600px;*/
+  min-width: 600px;
 }
 
 #tool_icons div {
@@ -178,10 +172,13 @@ border-radius: 0;*/
         
 }
 
-/*Bios*/
+/* Bios (Who We Are) */
+#bios {
+    background-color: #FFFFFF; 
+}
 
-#who_we_are h1 {
-    color: #078600;
+.bio-image {
+    width: 175px;
 }
 
 /*Footer*/
