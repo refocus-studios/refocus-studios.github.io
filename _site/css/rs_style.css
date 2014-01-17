@@ -10,8 +10,9 @@
         font-style: normal;
 }
 h1 {
-        font-weight: 200;
+        font-weight: bold;
         margin-bottom: 20px;
+        font-family: "Avenir Next", sans-serif;
 }
 h2, h3 {
         font-size: 1.25em;
@@ -151,7 +152,7 @@ border-radius: 0;*/
   height: 50px;
   text-align: justify;
   font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
-  min-width: 600px;
+  /*min-width: 600px;*/
 }
 
 #tool_icons div {
