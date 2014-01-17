@@ -93,10 +93,6 @@ border-radius: 0;*/
     overflow: hidden;
 }
 
-.container {
-    padding-top: 30px;
-}
-
 /*Content Containers*/
 .content_container {
     height: 100vh;
@@ -132,10 +128,11 @@ border-radius: 0;*/
     text-align: center;
 }
 
-
 /*About Us*/
-#about-us {
-    background-color: #009B95;
+#about_us {
+    background-color: #5ccdc9;
+    padding-top: 50px;
+    padding-bottom: -50px;
 }
 
 #about_us h1 {
@@ -181,18 +178,10 @@ border-radius: 0;*/
         
 }
 
-/* Bios (Who We Are) */
-#bios {
-    background-color: #FFFFFF; 
-}
+/*Bios*/
 
-<<<<<<< HEAD
 #who_we_are h1 {
     color: #078600;
-=======
-.bio-image {
-    width: 175px;
->>>>>>> master
 }
 
 /*Footer*/
