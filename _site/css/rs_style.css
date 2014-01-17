@@ -32,7 +32,7 @@ strong {
 }
 
 body{
-    background-color: rgb(230,233,238);  
+    background-color: black;  
     margin:0;
     padding:0;      
  }
@@ -83,67 +83,65 @@ border-radius: 0;*/
 }
 
 .boundry {
-max-width: 1080px;
-margin-left: auto;
-margin-right: auto;
-position: relative;
-overflow: hidden;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
 }
 
 /*Content Containers*/
 .content_container {
     height: 100vh;
     width: 100vw;   
+    margin-bottom: 3px;
 
 }
-
 
 /*Jumbrotron*/
-.jumbotron {
-                 
+.jumbotron {                 
     padding-top: 30vh;
-    background-color: #FFFFFF;
- 
+    background-color: #FFFFFF; 
+    
 }
-
 
 .main-logo {
-
-        max-width: 52%;
-        height: 100%;
-        margin-top: 22px;
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
-        background-size: 100%;        
-        float: none;
-        
-}
-
-.main-quote {
-
-        width: 100%;
-        height: 100%;
-        margin-top: 25px;
-        text-align: center;
-        
-        background-size: 100%;        
-        float: none;
+    max-width: 52%;
+    height: 100%;
+    margin-top: 22px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;           
+    float: none;
+    
 }
 
 #rs_logo img {        
         max-width: 90%;
 }
 
+.main-quote {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/*About Us*/
+#about_us {
+    background-color: #5ccdc9;
+    padding-top: 50px;
+    padding-bottom: -50px;
+}
+
+
 /*Why We Exist*/
 #why_exist {
-        color: rgb(10,80,0);
+ 
 }
 
 
 /*How We Work*/
 #how_we_work {
-        color: rgb(0,25,70);
+ 
 }
 
 #tool_icons {
@@ -168,10 +166,10 @@ overflow: hidden;
 
 /*What We Do*/
 #what_we_do {
-        color: rgb(80,0,0);
+        
 }
 
-/*Who We Are*/
+/*Bios*/
 
 
 /*Footer*/
