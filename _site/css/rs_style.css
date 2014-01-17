@@ -10,19 +10,22 @@
         font-style: normal;
 }
 h1 {
-        font-weight: 200;
+        font-size: 1.8em;
+        font-family: "Avenir Next", sans-serif;
         margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
 }
 h2, h3 {
-        font-size: 1.25em;
+        font-size: 1.5em;
         color: #5f5d60;
         margin-bottom: 16px;
         margin-top: 0;
 }
 p {        
-        color: black;
+        color: 0F0F0F;
         line-height: 1.7;
-        font-size: 1.1em;
+        font-size: 1.3em;
         font-weight: 200;
 }
 
@@ -135,11 +138,17 @@ border-radius: 0;*/
     background-color: #009B95;
 }
 
+#about_us h1 {
+    color:  #06276F;
+}
+
 
 /*Why We Exist*/
 #why_exist {
- 
+    
 }
+
+
 
 
 /*How We Work*/
@@ -151,7 +160,7 @@ border-radius: 0;*/
   height: 50px;
   text-align: justify;
   font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
-  min-width: 600px;
+  /*min-width: 600px;*/
 }
 
 #tool_icons div {
@@ -177,8 +186,13 @@ border-radius: 0;*/
     background-color: #FFFFFF; 
 }
 
+<<<<<<< HEAD
+#who_we_are h1 {
+    color: #078600;
+=======
 .bio-image {
     width: 175px;
+>>>>>>> master
 }
 
 /*Footer*/
