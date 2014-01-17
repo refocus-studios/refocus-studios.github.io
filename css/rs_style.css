@@ -53,34 +53,33 @@ width: 100%;
 z-index: 99;
 }
 
-.thin-navbar .button {
+/*.thin-navbar .button {
 margin: 0;
 -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 -ms-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 -o-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 .button {
 display: inline-block;
-color: #fff;
-background-color: #607988;
+color: #fafafa;
+background-color: #009B95;
 margin-top: .5em;
-height: 44px;
-border: none;
-padding: .5em ;
-font-family: "brandon-grotesque", ​Helvetica, ​Arial, sans-serif;
+border: 3px solid;
+border-color: white;
+padding: .3em .5em .3em .5em;
 -moz-appearance: none;
 -webkit-appearance: none;
 -ms-appearance: none;
 -o-appearance: none;
 appearance: none;
--moz-border-radius: 0;
+/*-moz-border-radius: 0;
 -webkit-border-radius: 0;
 -ms-border-radius: 0;
 -o-border-radius: 0;
-border-radius: 0;
+border-radius: 0;*/
 }
 
 .boundry {
@@ -119,7 +118,7 @@ overflow: hidden;
 /*Jumbrotron*/
 .jumbotron {
                  
-    padding: 200px; 
+ /*   padding: 200px; */
     background-color: #FFFFFF;
  /*   border: 15px solid orange;*/
 }
@@ -158,9 +157,6 @@ overflow: hidden;
         color: rgb(10,80,0);
 }
 
-#what_we_do h1, #how_we_work h1, #who_we_are h1 {
-    border-bottom: 2px solid gray;
-}
 
 /*How We Work*/
 #how_we_work {
