@@ -1,3 +1,9 @@
+--- 
+title: Refocus Studios Blog 
+---
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -60,10 +66,8 @@
     </div>
     <!-- /RS Logo -->
 
-    <!-- About Us ===================================================== -->
     <div class="content_container" id="about-us">
         <div class="container">
-
             <!-- /What We Do ===================================================== -->
             <div class="row">
                 <div class="col-sm-6">
@@ -78,9 +82,9 @@
                         </div>
                     </div>
                 </div>
-            <!-- /What We Do ===================================================== -->
+                <!-- /What We Do ===================================================== -->
 
-            <!-- How We Work ===================================================== -->
+                <!-- How We Work ===================================================== -->
                 <div class="col-sm-6">
                     <div class="row ft" id="work">
                         <div class="col-sm-9 ft-copy work">
@@ -126,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
             <!-- /How We Work ===================================================== -->
 
             <!-- What We Do ===================================================== -->
@@ -143,7 +147,7 @@
     </div>
     <!-- End What We Do ===================================================== -->
 
-    <!-- End About Us ===================================================== -->
+
 
     <!-- Bios ===================================================== -->
     <div class="content_container" id="bios">
@@ -154,109 +158,42 @@
                         <h1>Who We Are...</h1>
                     </div>
                 </div>
-                <!--Ari's Bio-->
+
+                {% for bio in site.data.bios %}
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
-                        <div class="col-sm-3 ">
-                            <div class="thumbnail ari img-rounded" style="border: none; box-shadow: none;">
-                                <img class="img-responsive img-circle bio-image" src="/images/bio_pic_ari.jpg">
-                            </div>
-                        </div>
 
+                        {% capture index %}{% cycle 'odd', 'even' %}{% endcapture %} {% if index == 'odd' %}
                         <div class="col-sm-9 ft-copy">
-                            <h2>Ari Perez</h2>
+                            <h2>{{ bio.name }}</h2>
                             <p>
-                                Ari from a young age has been passionate about software development. After graduating West Point and serving six years as a Communications Officer in the US Army, he found himself in leading consultant firms tackling tough challenges using his leadership experience from the Army.  
+                                {{ bio.synopsis }}
                             </p>
-
-                            <div class="bs-example" style="padding-bottom: 24px;">
-
-                                <a href="http://www.linkedin.com/profile/view?id=71368820" target="_blank">
-                                    <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
-                                </a>
-                            </div>
-
+                            {% include logo_linkedin.html id= bio.linkedin_id %}
                         </div>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content" style="background-color: rgb(232,232,232)">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title" id="myModalLabel">Ari Perez</h4>
-                                    </div>
-                                    <div class="modal-body">
-
-                                        <h2>Background</h2>
-                                        <p>
-                                            Ari from a young age has been passionate about software development. After graduating West Point and serving six years as a Communications Officer in the US Army, he found himself in leading consultant firms tackling tough challenges using his leadership experience from the Army and his passion for developing great code.
-                                        </p>
-                                        <a href="http://www.linkedin.com/profile/view?id=71368820" target="_blank">
-                                            <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
-                                        </a>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary btn-md" data-dismiss="modal">Close</button>
-
-                                    </div>
-                                </div>
-                                <!-- /.modal-content -->
-                            </div>
-                            <!-- /.modal-dialog -->
-                        </div>
-                        <!-- /.modal -->
-
-
-                    </div>
-
-                </div>
-                <!--/Ari's Bio-->
-
-                <!--Paul's Bio-->
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1 paul_border">
-                        <div class="col-sm-9 ft-copy">
-                            <h2>Paul Bishop</h2>
-                            <p>
-                                Paul is a self-starter who tirelessly works to solve any challenge placed in his way. After spending ten years as a US Army Communications officer, he has turned his entire focus to his newest challenge, bringing success to the clients of Refocus Studios. His US Army time provides Refocus Studios with extensive experience in large scale IT deployment and maintenance.
-                            </p>
-                            <a href="http://www.linkedin.com/profile/view?id=98756393" target="_blank">
-                                <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
-                            </a>
-                        </div>
-
                         <div class="col-sm-3">
                             <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
-                                <img class="img-responsive img-circle bio-image" src="/images/bio_pic_paul.jpg" alt="Picture Paul Bishop">
+                                <img class="img-responsive img-circle bio-image" src="/images/{{ bio.pic_url }}" alt="Picture {{ bio.name }}">
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!--/Paul's Bio-->
-
-                <!--Ryan's Bio-->
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1 ryan_border">
+                        {% else %}
                         <div class="col-sm-3">
-                            <div class="thumbnail ryan img-rounded bio-image" style="border: none; box-shadow: none;">
-                                <img class="img-responsive img-circle" src="/images/bio_pic_ryan.jpg" alt="Picture Ryan Dorr">
+                            <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
+                                <img class="img-responsive img-circle bio-image" src="/images/{{ bio.pic_url }}" alt="Picture {{ bio.name }}">
                             </div>
                         </div>
-
                         <div class="col-sm-9 ft-copy">
-                            <h2>Ryan Dorr</h2>
+                            <h2>{{ bio.name }}</h2>
                             <p>
-                                Ryan has a passion for Analytics and software development which is evident in everything he does. After years earning his stripes working for some of the top consulting firms in the US, he made it a personal goal to provide our clients with someone who can both understand management challenges and code platforms to help overcome them.
+                                {{ bio.synopsis }}
                             </p>
-                            <a href="http://www.linkedin.com/profile/view?id=241389180" target="_blank">
-                                <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
-                            </a>
+                            {% include logo_linkedin.html id = bio.linkedin_id %}
                         </div>
+                        {% endif %}
                     </div>
                 </div>
-                <!--/Ryan's Bio-->
+                {% endfor %}
+
             </div>
         </div>
     </div>
