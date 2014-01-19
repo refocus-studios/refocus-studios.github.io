@@ -1,0 +1,14 @@
+- name: Ari Perez
+  pic_url: bio_pic_ari.jpg
+  synopsis: "Ari from a young age has been passionate about software development. After graduating West Point and serving six years as a Communications Officer in the US Army, he found himself in leading consultant firms tackling tough challenges using his leadership experience from the Army."
+  linkedin_id: 71368820
+
+- name: Paul Bishop
+  pic_url: bio_pic_paul.jpg
+  synopsis: "Paul is a self-starter who tirelessly works to solve any challenge placed in his way. After spending ten years as a US Army Communications officer, he has turned his entire focus to his newest challenge, bringing success to the clients of Refocus Studios. His US Army time provides Refocus Studios with extensive experience in large scale IT deployment and maintenance."
+  linkedin_id: 98756393
+
+- name: Ryan Dorr
+  pic_url: bio_pic_ryan.jpg
+  synopsis: "Ryan has a passion for Analytics and software development which is evident in everything he does. After years earning his stripes working for some of the top consulting firms in the US, he made it a personal goal to provide our clients with someone who can both understand management challenges and code platforms to help overcome them."
+  linkedin_id: 241389180
