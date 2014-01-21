@@ -8,6 +8,7 @@
             url('../fonts/icomoon.svg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
 
 h1 {
@@ -30,20 +31,6 @@ p {
     font-weight: 200;
 }
 
-strong {
-        color: #5f5d60;
-}
-
-body{
-    background-color: black;  
-    margin:0;
-    padding:0;      
- }
-
-/*Navbar*/
-.navbar {
-    background-color: rgb(255,255,255);
-}
 
 .thin-navbar {
     position: fixed;
@@ -53,15 +40,6 @@ body{
     width: 100%;
     z-index: 99;
 }
-
-/*.thin-navbar .button {
-margin: 0;
--moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
--webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
--ms-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
--o-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}*/
 
 .button {
     display: inline-block;
@@ -75,11 +53,7 @@ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    /*-moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;*/
+
 }
 
 .boundry {
@@ -89,6 +63,7 @@ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
 }
+
 
 .container {
     padding-top: 30px;
@@ -109,25 +84,15 @@ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     
 }
 
-.main-logo {
-    max-width: 52%;
-    height: 100%;
-    margin-top: 22px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;           
-    float: none;
-    
+#rs-logo {            
+    margin: 0 auto;         
 }
 
-#rs_logo img {        
-    max-width: 90%;
-}
-
-.main-quote {
+#rs-quote {
     margin-top: 25px;
-    text-align: center;
+    text-align: center;    
 }
+
 
 
 /*About Us*/
@@ -207,82 +172,43 @@ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
 /* Media Queries
 ================================= */
-
-@media (max-width: 991px) {
-        .jumbotron {
-                padding-top: 120px;
-                padding-bottom: 20px;
-                background-position: 10% 10%;
-
-        } 
-        .ft-copy {
-                padding-top: 12px;
-        }
-        .ft-copy p {
-                width: auto;
-        }
-        .device {
-                margin-top: 28px;
-        }
-        
-}
-@media (max-width: 990px) {
-        .jumbotron {
-                height: 450px;
-        }
-
-        #what_we_do, #how_we_work, #who_we_are {
-                padding-top: 80px;
-        }
-}
 @media (max-width: 767px) {
-        .navbar {
-                min-height: 60px;
-        }
-        .main-logo {
-                max-width: 100%;
-                margin-top: 20px;
-        }
-        .jumbotron {
-                padding-top: 80px;
-                margin-bottom: 32px;
-                height: 300px;
-        }
-        .lead {
-                margin-bottom: 40px;
-        }
-        .ft {
-                margin-bottom: 16px;
-        }
-        hr {
-                margin-bottom: 40px;
-        }        
-        .btn-success {
-                width: 85%;
-                font-size: initial;
-        }
-        .callout, 
-        .link-list {
-                margin-top: 32px;
-        }
-        .main-footer {
-                margin-top: 64px;
-        }
-        .link-list {
-                float: left;
-                margin-right: 32px;
-        }
-        #what_we_do, #how_we_work, #who_we_are {
-                padding-top: 30px;
-        }
-        .ari, .paul, .ryan {
-                width: 150px;
-                height: 150px;
-        }
-        .paul_border {
-            border-top: 2px solid gray;
-        }
-        .ryan_border {
-            border-top: 2px solid gray;
-        }
+
+h1 {
+    font-size: 2em;        
+}
+
+.content_container {
+    height: 100%;
+
+}
+
+.jumbotron {
+    height: 100vh;
+}
+
+.footer_container {
+    
+    font-size: 1.1em;
+}
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+.content_container {
+    height: 100%;
+
+}
+
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+}
+@media (min-width: 1200px) {
+
 }

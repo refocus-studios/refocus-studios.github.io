@@ -16,7 +16,7 @@ title: Refocus Studios Blog
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
 
     <link rel="shortcut icon" href="images/rs_favicon.jpeg" type="image/x-icon">
-    <link rel="icon" href="images/rs_favicon.jpeg" type="image/x-icon">
+    <link rel="icon" href="images/rs_favicon.jpeg" type="image/x-icon">    
 </head>
 
 <body>
@@ -30,7 +30,7 @@ title: Refocus Studios Blog
 
     <!-- Fixed navbar =====================================================-->
     <div class="navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
-        <div class="container">
+        
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -50,19 +50,17 @@ title: Refocus Studios Blog
                 </ul>
             </div>
             <!--/.nav-collapse -->
-        </div>
+        
     </div>
     <!-- /Fixed navbar ===================================================== -->
 
     <!-- RS Logo ===================================================== -->
-    <div class="content_container jumbotron" id="main-logo">
+    <div class="content_container jumbotron">
         <div class="row">
-            <div class="main-logo">
-                <img id="rs_logo" src="/images/rs_logo.jpg" alt="Refocus Studios Logo">
-            </div>
+            <img id="rs-logo" class="img-responsive" src="/images/rs_logo.jpg" alt="Refocus Studios Logo">
         </div>
         <div class="row">
-            <div class="main-quote" id="rs_logo">
+            <div id="rs-quote">
                 <p>Efficiency Through Simplicity</p>
             </div>
         </div>
@@ -155,13 +153,14 @@ title: Refocus Studios Blog
     <!-- Bios ===================================================== -->
     <div class="content_container" id="bios">
         <div class="container">
-            <div class="row ft" id="are">
+            
                 <div class="row ft">
                     <div class="col-sm-10 col-sm-offset-1 ft-copy">
                         <h1>Who We Are...</h1>
                     </div>
                 </div>
 
+                <div class="normal hidden-xs">
                 {% for bio in site.data.bios %}
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
@@ -196,8 +195,33 @@ title: Refocus Studios Blog
                     </div>
                 </div>
                 {% endfor %}
+                </div>
+                <div id="mobile" class="visible-xs">
+                                    {% for bio in site.data.bios %}
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
 
-            </div>
+
+                        <div class="col-sm-3">
+                            <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
+                                <img class="img-responsive img-circle bio-image" src="/images/{{ bio.pic_url }}" alt="Picture {{ bio.name }}">
+                            </div>
+                        </div>
+                        <div class="col-sm-9 ft-copy">
+                            <h2>{{ bio.name }}</h2>
+                            <p>
+                                {{ bio.synopsis }}
+                            </p>
+                            {% include logo_linkedin.html id = bio.linkedin_id %}
+                        </div>
+                        
+                    </div>
+                </div>
+                {% endfor %}
+
+                </div>
+
+            
         </div>
     </div>
     <!-- /Who We Are =====================================================-->
@@ -206,10 +230,10 @@ title: Refocus Studios Blog
 
     <!-- Footer ===================================================== -->
 
-    <div class="footer_container" id="contact">
-        <div class="row">
+    <div class="footer_container">
+        <div class="container row">
             <p>Questions or comments? Feel free to drop us a line... &nbsp;&nbsp;
-                <button type="button" id="footer-btn" class="btn btn-info btn-lg " onclick="window.open('mailto:info@refocus-studios.com')">Contact Us</button>
+                <button type="button" id="footer-btn" class="btn btn-info btn-lg" onclick="window.open('mailto:info@refocus-studios.com')">Contact Us</button>
             </p>
         </div>
     </div>
