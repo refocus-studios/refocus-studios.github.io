@@ -65,23 +65,23 @@ p {
 }
 
 
-.container {
-    padding-top: 30px;
-}
-
 /*Content Containers*/
 .content_container {
     height: 100vh;
-    width: 100vw;   
-    margin-bottom: 3px;
-
 }
+
 
 /*Jumbrotron*/
 .jumbotron {                 
-    padding-top: 30vh;
+    padding: 30vh 0;
     background-color: #FFFFFF; 
+    height: 100vh;
     
+}
+
+.jumbotron .container {
+    padding-top: 0;
+    margin: auto auto;
 }
 
 #rs-logo {            
@@ -98,25 +98,26 @@ p {
 /*About Us*/
 #about-us {
     background-color: #009B95;
-}
+    padding: 5vh 0;
 
+}
 
 /*Why We Exist*/
-#why_exist {
+
+/*#why_exist {
  
-}
+}*/
 
 
 /*How We Work*/
-#how_we_work {
+
+/*#how_we_work {
  
-}
+}*/
 
 #tool_icons {
     height: 50px;
-    /*text-align: justify;*/
     font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
-    /*min-width: 600px;*/
 }
 
 #tool_icons div {
@@ -126,11 +127,6 @@ p {
     float: left;
 }
 
-#tool_icons:after {
-    content: '';
-    width: 100%;  /*Ensures there are at least 2 lines of text, so justification works */
-    display: inline-block;
-}
 
 #tool_icons img {
     max-width: 100%;
@@ -138,14 +134,17 @@ p {
     margin: auto auto;
 }
 
+
 /*What We Do*/
-#what_we_do {
+
+/*#what_we_do {
         
-}
+}*/
 
 /* Bios (Who We Are) */
 #bios {
     background-color: #FFFFFF; 
+    padding: 5vh 0;
 }
 
 .bio-image {
@@ -154,10 +153,10 @@ p {
 
 /*Footer*/
 .footer_container {
+    margin-top: 10vh;
     height: 50vh;
-    width: 100vw;
     
-    padding-top: 20vh;
+    padding: 20vh 0;
     text-align: center;
 
     background-color: #009B95;   
@@ -166,9 +165,15 @@ p {
     font-size: 1.75em;
 }
 
+.footer_container div {
+    max-width: 95%;
+    margin: auto;
+}
+
 #footer-btn {
     background-color: #FF7100;
 }
+
 
 /* Media Queries
 ================================= */
@@ -183,17 +188,24 @@ h1 {
 
 }
 
+#rs-logo {
+    max-width: 80%;
+}
+
+#rs-quote {
+    max-width: 80%;
+    margin: 25px auto;
+}
+
 .jumbotron {
     height: 100vh;
 }
 
 .footer_container {
-    
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 }
-
 
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -203,12 +215,39 @@ h1 {
 
 }
 
+.jumbotron {
+    height: 100vh;
+}
+
+.footer_container {
+    height: 40vh;
+    font-size: 1.4em;
+}
+
+
 
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 
+#about-us h1 {
+    margin-bottom: 8px;
+}
+
+#bios h1, #bios h2 {
+    margin-bottom: 8px;
+}
+
+.content_container {
+        height: 100%;
+    }
 
 }
 @media (min-width: 1200px) {
 
+}
+
+@media (max-height: 650px) {
+    .content_container {
+        height: 100%;
+    }
 }
