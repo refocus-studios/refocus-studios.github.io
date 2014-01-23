@@ -190,6 +190,11 @@ p {
         height: 240px;
         padding: 22% 0;
     }
+
+    #bios, #about-us {
+        height: 100%;
+        padding: 10px 0;
+    }
 }
 
 @media screen and (max-width: 767px) {
