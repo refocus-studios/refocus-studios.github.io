@@ -11,6 +11,10 @@
 
 }
 
+body {
+    max-width: 100%;
+}
+
 h1 {
     font-weight: bold;
     margin-bottom: 20px;
@@ -76,7 +80,7 @@ p {
     padding: 30vh 0;
     background-color: #FFFFFF; 
     height: 100vh;
-    
+    max-width: 100%;
 }
 
 .jumbotron .container {
@@ -131,7 +135,7 @@ p {
 #tool_icons img {
     max-width: 100%;
     display: block;
-    margin: auto auto;
+    margin: auto;
 }
 
 
@@ -155,7 +159,7 @@ p {
 .footer_container {
     margin-top: 10vh;
     height: 50vh;
-    
+    max-width: 100%;
     padding: 20vh 0;
     text-align: center;
 
