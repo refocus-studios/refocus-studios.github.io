@@ -177,6 +177,15 @@ p {
 
 /* Media Queries
 ================================= */
+@media (max-width: 400px) {
+    .jumbotron {
+        height: 100%;
+    }
+    .footer_container {
+        height: 100%;
+    }
+}
+
 @media (max-width: 767px) {
 
 h1 {
