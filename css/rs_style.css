@@ -71,7 +71,7 @@ p {
 }
 
 
-/*Jumbrotron*/
+/*Jumbotron*/
 .jumbotron {                 
     padding: 30vh 0;
     background-color: #FFFFFF; 
@@ -177,16 +177,18 @@ p {
 
 /* Media Queries
 ================================= */
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .jumbotron {
-        height: 100%;
+        max-height: 480px;
+        padding: 20vh 0;
     }
     .footer_container {
-        height: 100%;
+        max-height: 240px;
+        padding: 15vh 0;
     }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
 h1 {
     font-size: 2em;        
@@ -217,7 +219,7 @@ h1 {
 }
 
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
 
 .content_container {
     height: 100%;
@@ -234,9 +236,8 @@ h1 {
 }
 
 
-
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
 
 #about-us h1 {
     margin-bottom: 8px;
@@ -255,7 +256,7 @@ h1 {
 
 }
 
-@media (max-height: 650px) {
+@media screen and (max-height: 650px) {
     .content_container {
         height: 100%;
     }
