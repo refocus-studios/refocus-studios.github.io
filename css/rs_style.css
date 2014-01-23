@@ -185,10 +185,12 @@ p {
     .jumbotron {
         max-height: 480px;
         padding: 20vh 0;
+        width: 100vw;
     }
     .footer_container {
         max-height: 240px;
         padding: 15vh 0;
+        width: 100vw;
     }
 }
 
