@@ -70,7 +70,7 @@ p {
 
 
 /*Content Containers*/
-.content_container {
+#bios, #about-us {
     height: 100vh;
 }
 
@@ -85,7 +85,7 @@ p {
 
 .jumbotron .container {
     padding-top: 0;
-    margin: auto auto;
+    margin: auto;
 }
 
 #rs-logo {            
@@ -183,14 +183,12 @@ p {
 ================================= */
 @media screen and (max-width: 400px) {
     .jumbotron {
-        max-height: 480px;
-        padding: 20vh 0;
-        width: 100vw;
+        /*max-height: 480px;*/
+        padding: 30vh 0;
     }
     .footer_container {
-        max-height: 240px;
+        /*max-height: 240px;*/
         padding: 15vh 0;
-        width: 100vw;
     }
 }
 
@@ -200,9 +198,8 @@ h1 {
     font-size: 2em;        
 }
 
-.content_container {
+#bios, #about-us {
     height: 100%;
-
 }
 
 #rs-logo {
@@ -227,9 +224,8 @@ h1 {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
 
-.content_container {
+#bios, #about-us {
     height: 100%;
-
 }
 
 .jumbotron {
@@ -253,9 +249,9 @@ h1 {
     margin-bottom: 8px;
 }
 
-.content_container {
+#bios, #about-us {
         height: 100%;
-    }
+}
 
 }
 @media (min-width: 1200px) {
@@ -263,7 +259,8 @@ h1 {
 }
 
 @media screen and (max-height: 650px) {
-    .content_container {
+    #bios, #about-us {
         height: 100%;
     }
 }
+
