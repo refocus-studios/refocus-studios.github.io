@@ -108,16 +108,10 @@ p {
 
 /*Why We Exist*/
 
-/*#why_exist {
- 
-}*/
 
 
 /*How We Work*/
 
-/*#how_we_work {
- 
-}*/
 
 #tool_icons {
     height: 50px;
@@ -141,9 +135,6 @@ p {
 
 /*What We Do*/
 
-/*#what_we_do {
-        
-}*/
 
 /* Bios (Who We Are) */
 #bios {
@@ -157,14 +148,11 @@ p {
 
 /*Footer*/
 .footer_container {
-    margin-top: 10vh;
     height: 50vh;
     max-width: 100%;
     padding: 20vh 0;
     text-align: center;
-
     background-color: #009B95;   
-
     font-family: "brandon-grotesque", ​Helvetica, ​Arial, sans-serif;
     font-size: 1.75em;
 }
@@ -247,7 +235,7 @@ h1 {
 }
 
 #bios, #about-us {
-        height: 100%;
+    height: 100%;
 }
 
 }
@@ -255,7 +243,7 @@ h1 {
 
 }
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 740px) {
     #bios, #about-us {
         height: 100%;
     }
