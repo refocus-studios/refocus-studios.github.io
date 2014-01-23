@@ -183,12 +183,12 @@ p {
 ================================= */
 @media screen and (max-width: 400px) {
     .jumbotron {
-        /*max-height: 480px;*/
-        padding: 30vh 0;
+        height: 480px;
+        padding: 36% 0;
     }
     .footer_container {
-        /*max-height: 240px;*/
-        padding: 15vh 0;
+        height: 240px;
+        padding: 22% 0;
     }
 }
 
@@ -211,10 +211,6 @@ h1 {
     margin: 25px auto;
 }
 
-.jumbotron {
-    height: 100vh;
-}
-
 .footer_container {
     font-size: 1.2em;
 }
@@ -226,10 +222,6 @@ h1 {
 
 #bios, #about-us {
     height: 100%;
-}
-
-.jumbotron {
-    height: 100vh;
 }
 
 .footer_container {
