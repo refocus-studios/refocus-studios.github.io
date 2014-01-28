@@ -252,8 +252,8 @@ h1 {
 
 @media screen and (max-height: 529px) {
     .jumbotron {
-        height: 320px;
-        padding: 2% 0;
+        height: 440px;
+        padding: 3% 0;
     }
     .footer_container {
         height: 160px;
