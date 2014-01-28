@@ -35,6 +35,9 @@ p {
     font-weight: 200;
 }
 
+.navbar-default {
+   opacity: .88;
+}
 
 .thin-navbar {
     position: fixed;
@@ -169,7 +172,7 @@ p {
 
 /* Media Queries
 ================================= */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .jumbotron {
         height: 480px;
         padding: 36% 0;
@@ -206,6 +209,10 @@ h1 {
 
 .footer_container {
     font-size: 1.2em;
+}
+
+.button {
+    display: none;
 }
 
 }
