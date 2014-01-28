@@ -174,7 +174,7 @@ p {
 ================================= */
 @media screen and (max-width: 420px) {
     .jumbotron {
-        height: 480px;
+        height: 372px;
         padding: 36% 0;
     }
     .footer_container {
