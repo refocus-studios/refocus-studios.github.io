@@ -172,7 +172,7 @@ p {
 
 /* Media Queries
 ================================= */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
     .jumbotron {
         height: 372px;
         padding: 36% 0;
@@ -250,7 +250,7 @@ h1 {
 
 }
 
-@media screen and (max-height: 320px) {
+@media screen and (max-height: 529px) {
     .jumbotron {
         height: 320px;
         padding: 2% 0;
