@@ -54,7 +54,7 @@
 <ul>
 <li>Set the following settings in the &#39;/config/environments/production&#39; file so that Bootstrap will work on Heroku.</li>
 </ul>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">config</span><span class="o">.</span><span class="n">cache_classes</span> <span class="o">=</span> <span class="kp">true</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="o">.</span><span class="n">cache_classes</span> <span class="o">=</span> <span class="kp">true</span>
 <span class="n">config</span><span class="o">.</span><span class="n">serve_static_assets</span> <span class="o">=</span> <span class="kp">true</span>
 <span class="n">config</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">compile</span> <span class="o">=</span> <span class="kp">true</span>
 <span class="n">config</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">digest</span> <span class="o">=</span> <span class="kp">true</span>
@@ -62,13 +62,13 @@
 <ul>
 <li>Set the Heroku Google OmniAuth2 variables</li>
 </ul>
-<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">rake figaro:heroku
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rake figaro:heroku
 </code></pre></div>
 <ul>
 <li>Manually add users using the Heroku Rails Console</li>
 </ul>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">heroku run rails c
-</code></pre></div><div class="highlight"><pre><code class="text language-text" data-lang="text">User.create( email: &quot;ari@refocus-studios.com&quot;, password: Devise.friendly_token[0,20])
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku run rails c
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">User.create( email: &quot;ari@refocus-studios.com&quot;, password: Devise.friendly_token[0,20])
 </code></pre></div>
 </div>
 <div class="post col-md-2"></div>
