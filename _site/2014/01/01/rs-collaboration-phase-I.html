@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Refocus Studios Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 20px;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    
+  </head>
+
+  <body>
+
+  <div class="container">
+  
+   <h1><a href="/">Refocus Studios Blog</a></h1>    
+   <hr>
+   <br>
+
+      <div class="post col-md-2"></div>
+<div class="post col-md-8">
+<h2>Phase I - RS Collaboration Development&nbsp;&nbsp;<br>
+<small>01 Jan 2014</small></h2>
+
+<h3>ToDo</h3>
+
+<ul>
+<li>Create the APP</li>
+<li>Setup Devise w/ Google OmniAuth</li>
+</ul>
+
+<h4>Create the Application</h4>
+
+<ul>
+<li>Initialize a new App with a postgres DB and no test units. (Will use RSPEC for testing)</li>
+</ul>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rails new rs_collaboration --database<span class="o">=</span>postgresql --skip-test-unit
+</code></pre></div>
+<ul>
+<li>Remove the Username and Password fields from &quot;database.yml&quot;</li>
+</ul>
+
+<h4>Git</h4>
+
+<ul>
+<li>Add to &#39;.gitignore&#39; file</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it&#39;s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+</code></pre></div>
+<ul>
+<li>Initialize your Repository</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;first commit&quot;</span>
+</code></pre></div>
+<h4>Create the Root</h4>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rails</span> <span class="n">g</span> <span class="n">controller</span> <span class="no">Collaboration</span> <span class="n">index</span>
+</code></pre></div>
+<h4>Security</h4>
+
+<ul>
+<li>Add the following three Gems</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span>
+<span class="n">gem</span> <span class="s1">&#39;omniauth-google-oauth2&#39;</span>
+<span class="n">gem</span> <span class="s1">&#39;figaro&#39;</span>
+</code></pre></div>
+<ul>
+<li>bundle install</li>
+</ul>
+
+<h5>Google Login</h5>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rails</span> <span class="n">generate</span> <span class="ss">figaro</span><span class="p">:</span><span class="n">install</span>
+</code></pre></div>
+<p>https://cloud.google.com/console?redirected=true#/project/apps~refocus-studios/apiui/credential</p>
+
+<ul>
+<li>Ensure that your redirect URI is set appropiately</li>
+<li>Grab the &#39;client ID&#39; and &#39;client Secret&#39; variables and add to the &#39;config/application.yml&#39;</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">GOOGLE_CLIENT_ID</span><span class="p">:</span> <span class="s2">&quot;Add here&quot;</span>
+<span class="ss">GOOGLE_CLIENT_SECRET</span><span class="p">:</span> <span class="s2">&quot;Add here&quot;</span>
+</code></pre></div>
+<h5>Devise</h5>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rails</span> <span class="n">generate</span> <span class="ss">devise</span><span class="p">:</span><span class="n">install</span>
+<span class="n">rails</span> <span class="n">generate</span> <span class="n">devise</span> <span class="no">User</span>
+<span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="n">migrate</span>
+</code></pre></div>
+<ul>
+<li>Edit the &#39;User&#39; model and remove the following items. </li>
+</ul>
+
+<p>[&#39;registrable&#39;, &#39;recoverable&#39; and &#39;validatable&#39;]</p>
+
+<ul>
+<li>Add the following to your &#39;config/initializers/devise.rb&#39; file.</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s2">&quot;omniauth-google-oauth2&quot;</span>
+<span class="n">config</span><span class="o">.</span><span class="n">omniauth</span> <span class="ss">:google_oauth2</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">&quot;GOOGLE_CLIENT_ID&quot;</span><span class="o">]</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">&quot;GOOGLE_CLIENT_SECRET&quot;</span><span class="o">]</span><span class="p">,</span> <span class="p">{</span> <span class="ss">access_type</span><span class="p">:</span> <span class="s2">&quot;offline&quot;</span><span class="p">,</span> <span class="ss">approval_prompt</span><span class="p">:</span> <span class="s2">&quot;&quot;</span> <span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Add the following to your &#39;app/models/user.rb&#39; file</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">devise</span> <span class="ss">:omniauthable</span><span class="p">,</span> <span class="ss">:omniauth_providers</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:google_oauth2</span><span class="o">]</span>
+</code></pre></div>
+<ul>
+<li>Add the following to your &#39;routes&#39; file</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">devise_for</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:controllers</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:omniauth_callbacks</span> <span class="o">=&gt;</span> <span class="s2">&quot;users/omniauth_callbacks&quot;</span> <span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Create a new file &#39;app/controllers/users/omniauth<em>callbacks</em>controller.rb&#39; and add the following</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Users</span><span class="o">::</span><span class="no">OmniauthCallbacksController</span> <span class="o">&lt;</span> <span class="no">Devise</span><span class="o">::</span><span class="no">OmniauthCallbacksController</span>
+  <span class="k">def</span> <span class="nf">google_oauth2</span>
+      <span class="c1"># You need to implement the method below in your model (e.g. app/models/user.rb)</span>
+      <span class="vi">@user</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">find_for_google_oauth2</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="o">[</span><span class="s2">&quot;omniauth.auth&quot;</span><span class="o">]</span><span class="p">,</span> <span class="n">current_user</span><span class="p">)</span>
+
+      <span class="k">if</span> <span class="vi">@user</span>
+        <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="no">I18n</span><span class="o">.</span><span class="n">t</span> <span class="s2">&quot;devise.omniauth_callbacks.success&quot;</span><span class="p">,</span> <span class="ss">:kind</span> <span class="o">=&gt;</span> <span class="s2">&quot;Google&quot;</span>
+        <span class="n">sign_in_and_redirect</span> <span class="vi">@user</span><span class="p">,</span> <span class="ss">:event</span> <span class="o">=&gt;</span> <span class="ss">:authentication</span>
+      <span class="k">else</span>
+                <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;Login Failed&quot;</span>
+        <span class="n">redirect_to</span> <span class="n">root_path</span>
+      <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+<ul>
+<li>Add the following to your &quot;user.rb&quot; model</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">find_for_google_oauth2</span><span class="p">(</span><span class="n">access_token</span><span class="p">,</span> <span class="n">signed_in_resource</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">access_token</span><span class="o">.</span><span class="n">info</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="ss">:email</span> <span class="o">=&gt;</span> <span class="n">data</span><span class="o">[</span><span class="s2">&quot;email&quot;</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
+    <span class="n">user</span>
+<span class="k">end</span>
+</code></pre></div>
+<ul>
+<li>Manually add users using the Rails Console</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">User.create( email: &quot;ari@refocus-studios.com&quot;, password: Devise.friendly_token[0,20])
+</code></pre></div>
+<ul>
+<li>Add the following to your &#39;index.html&#39; page and test it.</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;% unless user_signed_in? %&gt;
+&lt;%= link_to &quot;Sign in with Google&quot;, user_omniauth_authorize_path(:google_oauth2) %&gt;
+&lt;% else %&gt;
+&lt;%= link_to&#39;Logout&#39;, destroy_user_session_path, :method =&gt; :delete %&gt;   
+&lt;% end %&gt;
+</code></pre></div>
+<p>(i) <a href="https://github.com/plataformatec/devise">Devise Documentation</a></p>
+
+<p>(i) <a href="https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview#google-oauth2-example">Google OmniAuth2 Gem</a></p>
+
+<p>=======</p>
+
+<h3>Phase II</h3>
+
+<ul>
+<li>Add Bootstrap</li>
+<li>Push to Heroku</li>
+</ul>
+
+<h4>Bootstrap</h4>
+
+<ul>
+<li><p><a href="http://getbootstrap.com/">Physically added Bootstrap files to the project.</a></p></li>
+<li><p><a href="https://gist.github.com/ariperez83/8208993">Added alerts that work with Bootstrap</a></p></li>
+<li><p>Added a Navbar</p></li>
+</ul>
+
+<h4>Heroku</h4>
+
+<ul>
+<li>Set the following settings in the &#39;/config/environments/production&#39; file so that Bootstrap will work on Heroku.</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="o">.</span><span class="n">cache_classes</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">config</span><span class="o">.</span><span class="n">serve_static_assets</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">config</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">compile</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">config</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">digest</span> <span class="o">=</span> <span class="kp">true</span>
+</code></pre></div>
+<ul>
+<li>Set the Heroku Google OmniAuth2 variables</li>
+</ul>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rake figaro:heroku
+</code></pre></div>
+<ul>
+<li>Manually add users using the Heroku Rails Console</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku run rails c
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">User.create( email: &quot;ari@refocus-studios.com&quot;, password: Devise.friendly_token[0,20])
+</code></pre></div>
+</div>
+<div class="post col-md-2"></div>
+
+
+    </div>
+
+  </body>
+</html>

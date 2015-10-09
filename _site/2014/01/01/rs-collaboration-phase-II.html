@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Refocus Studios Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 20px;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    
+  </head>
+
+  <body>
+
+  <div class="container">
+  
+   <h1><a href="/">Refocus Studios Blog</a></h1>    
+   <hr>
+   <br>
+
+      <div class="post col-md-2"></div>
+<div class="post col-md-8">
+<h2>Phase II - RS Collaboration Development&nbsp;&nbsp;<br>
+<small>01 Jan 2014</small></h2>
+
+<h3>ToDo</h3>
+
+<ul>
+<li>Add Bootstrap</li>
+<li>Push to Heroku</li>
+</ul>
+
+<h4>Bootstrap</h4>
+
+<p><a href="http://getbootstrap.com/">Physically added Bootstrap files to the project.</a></p>
+
+<p><a href="https://gist.github.com/ariperez83/8208993">Added alerts that work with Bootstrap</a></p>
+
+<script src="https://gist.github.com/8208993.js"> </script>
+ 
+
+<ul>
+<li>Added a Navbar</li>
+</ul>
+
+<h4>Heroku</h4>
+
+<ul>
+<li>Set the following settings in the &#39;/config/environments/production&#39; file so that Bootstrap will work on Heroku.</li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="o">.</span><span class="n">cache_classes</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">config</span><span class="o">.</span><span class="n">serve_static_assets</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">config</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">compile</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">config</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">digest</span> <span class="o">=</span> <span class="kp">true</span>
+</code></pre></div>
+<ul>
+<li>Set the Heroku Google OmniAuth2 variables</li>
+</ul>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rake figaro:heroku
+</code></pre></div>
+<ul>
+<li>Manually add users using the Heroku Rails Console</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku run rails c
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">User.create( email: &quot;ari@refocus-studios.com&quot;, password: Devise.friendly_token[0,20])
+</code></pre></div>
+</div>
+<div class="post col-md-2"></div>
+
+
+    </div>
+
+  </body>
+</html>
