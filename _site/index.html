@@ -1,6 +1,5 @@
----
-title: Refocus Studios Blog
----
+<!DOCTYPE html>
+<html>
 
 <head>
     <title>Refocus Studios</title>
@@ -24,7 +23,6 @@ title: Refocus Studios Blog
             <a class="button" href="#contact">Contact</a>
         </div>
     </div>
-
 
     <!-- Fixed navbar =====================================================-->
     <div class="navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
@@ -143,7 +141,6 @@ title: Refocus Studios Blog
             </div>
         </div>
     </div>
-
     <!-- End What We Do ===================================================== -->
 
 
@@ -159,66 +156,178 @@ title: Refocus Studios Blog
                 </div>
 
                 <div class="normal hidden-xs">
-                {% for bio in site.data.bios %}
+                
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
 
-                        {% capture index %}{% cycle 'odd', 'even' %}{% endcapture %} {% if index == 'odd' %}
+                         
                         <div class="col-sm-9 ft-copy">
-                            <h2>{{ bio.name }}</h2>
+                            <h2>Ari Perez</h2>
                             <p>
-                                {{ bio.synopsis }}
+                                After college, Ari spent six years as a Communications Officer in the US Army.  
+He has since spent time in leading consulting firms and a small business building 
+invaluable client and Program Management skills. His latest move to Refocus Studios 
+allows him the opportunity to bring all his experience together for the purpose of crafting 
+software solutions that meet the demands of today's rapidly evolving business landscape.
+
                             </p>
-                            {% include logo_linkedin.html id= bio.linkedin_id %}
+                            <a href="http://www.linkedin.com/profile/view?id=71368820" target="_blank">
+    <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
+</a>
+
                         </div>
                         <div class="col-sm-3">
                             <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
-                                <img class="img-responsive img-circle bio-image" src="/images/{{ bio.pic_url }}" alt="Picture {{ bio.name }}">
+                                <img class="img-responsive img-circle bio-image" src="/images/bio_pic_ari.jpg" alt="Picture Ari Perez">
                             </div>
                         </div>
-                        {% else %}
-                        <div class="col-sm-3">
-                            <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
-                                <img class="img-responsive img-circle bio-image" src="/images/{{ bio.pic_url }}" alt="Picture {{ bio.name }}">
-                            </div>
-                        </div>
-                        <div class="col-sm-9 ft-copy">
-                            <h2>{{ bio.name }}</h2>
-                            <p>
-                                {{ bio.synopsis }}
-                            </p>
-                            {% include logo_linkedin.html id = bio.linkedin_id %}
-                        </div>
-                        {% endif %}
+                        
                     </div>
                 </div>
-                {% endfor %}
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+
+                         
+                        <div class="col-sm-3">
+                            <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
+                                <img class="img-responsive img-circle bio-image" src="/images/bio_pic_paul.jpg" alt="Picture Paul Bishop">
+                            </div>
+                        </div>
+                        <div class="col-sm-9 ft-copy">
+                            <h2>Paul Bishop</h2>
+                            <p>
+                                Paul is a self-starter who tirelessly works to solve any challenge placed in his way.
+After spending nine years as a US Army Communications officer, he has turned his entire focus 
+to his newest challenge, bringing success to the clients of Refocus Studios. His US Army 
+experience and engineering background provides Refocus Studios with extensive experience 
+in developing unique solutions to the technical problems today's users encounter.   
+
+                            </p>
+                            <a href="http://www.linkedin.com/profile/view?id=98756393" target="_blank">
+    <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
+</a>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+
+                         
+                        <div class="col-sm-9 ft-copy">
+                            <h2>Ryan Dorr</h2>
+                            <p>
+                                Ryan has a passion for Analytics and software development which is evident in everything he does. 
+After years earning his stripes working for some of the top consulting firms in the US, he made it 
+a personal goal to provide our clients with someone who can both understand management challenges 
+and code platforms to help overcome them."
+
+                            </p>
+                            <a href="http://www.linkedin.com/profile/view?id=241389180" target="_blank">
+    <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
+</a>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
+                                <img class="img-responsive img-circle bio-image" src="/images/bio_pic_ryan.jpg" alt="Picture Ryan Dorr">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
                 </div>
                 <div id="mobile" class="visible-xs">
-                                    {% for bio in site.data.bios %}
+                                    
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
 
 
                         <div class="col-sm-3">
                             <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
-                                <img class="img-responsive img-circle bio-image" src="/images/{{ bio.pic_url }}" alt="Picture {{ bio.name }}">
+                                <img class="img-responsive img-circle bio-image" src="/images/bio_pic_ari.jpg" alt="Picture Ari Perez">
                             </div>
                         </div>
                         <div class="col-sm-9 ft-copy">
-                            <h2>{{ bio.name }}</h2>
+                            <h2>Ari Perez</h2>
                             <p>
-                                {{ bio.synopsis }}
+                                After college, Ari spent six years as a Communications Officer in the US Army.  
+He has since spent time in leading consulting firms and a small business building 
+invaluable client and Program Management skills. His latest move to Refocus Studios 
+allows him the opportunity to bring all his experience together for the purpose of crafting 
+software solutions that meet the demands of today's rapidly evolving business landscape.
+
                             </p>
-                            {% include logo_linkedin.html id = bio.linkedin_id %}
+                            <a href="http://www.linkedin.com/profile/view?id=71368820" target="_blank">
+    <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
+</a>
+
                         </div>
 
                     </div>
                 </div>
-                {% endfor %}
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+
+
+                        <div class="col-sm-3">
+                            <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
+                                <img class="img-responsive img-circle bio-image" src="/images/bio_pic_paul.jpg" alt="Picture Paul Bishop">
+                            </div>
+                        </div>
+                        <div class="col-sm-9 ft-copy">
+                            <h2>Paul Bishop</h2>
+                            <p>
+                                Paul is a self-starter who tirelessly works to solve any challenge placed in his way.
+After spending nine years as a US Army Communications officer, he has turned his entire focus 
+to his newest challenge, bringing success to the clients of Refocus Studios. His US Army 
+experience and engineering background provides Refocus Studios with extensive experience 
+in developing unique solutions to the technical problems today's users encounter.   
+
+                            </p>
+                            <a href="http://www.linkedin.com/profile/view?id=98756393" target="_blank">
+    <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
+</a>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+
+
+                        <div class="col-sm-3">
+                            <div class="thumbnail paul img-rounded" style="border: none; box-shadow: none;">
+                                <img class="img-responsive img-circle bio-image" src="/images/bio_pic_ryan.jpg" alt="Picture Ryan Dorr">
+                            </div>
+                        </div>
+                        <div class="col-sm-9 ft-copy">
+                            <h2>Ryan Dorr</h2>
+                            <p>
+                                Ryan has a passion for Analytics and software development which is evident in everything he does. 
+After years earning his stripes working for some of the top consulting firms in the US, he made it 
+a personal goal to provide our clients with someone who can both understand management challenges 
+and code platforms to help overcome them."
+
+                            </p>
+                            <a href="http://www.linkedin.com/profile/view?id=241389180" target="_blank">
+    <img src="/images/logo_linkedin.jpg" style="width: 30px; height: 40px;">
+</a>
+
+                        </div>
+
+                    </div>
+                </div>
+                
 
                 </div>
-
 
 
         </div>
@@ -237,13 +346,11 @@ title: Refocus Studios Blog
         </div>
     </div>
 
-
     <!-- End footer -->
 
 
 </body>
 <!-- /Footer ===================================================== -->
-
 
 <!-- Bootstrap core JavaScript
     ================================================== -->
